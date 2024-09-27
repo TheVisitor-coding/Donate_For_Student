@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mercy - Tailwind Template</title>
+    <title>My Digital Solidaire</title>
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,59 +29,55 @@
 
   <section class="font-body">
     <!-- home section -->
-    <section class="bg-white py-10 md:mb-10">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <nav class="w-full flex justify-center" x-data="{navbarOpen:false}">
-          <img src="assets/image/navbar-logo.png" alt="Logo" />
-        </nav>
+    <section class="bg-white py-10 md:mb-10 h-screen relative overflow-hidden">
+        <div class="container max-w-screen-xl mx-auto px-4 h-full">
+            <nav class="w-full flex justify-center" x-data="{navbarOpen:false}">
+                <img src="assets/image/navbar-logo.png" alt="Logo" class="w-32" />
+            </nav>
 
-        <div class="flex flex-col lg:flex-row justify-between space-x-20">
-          <div class="text-center lg:text-left mt-40">
-            <h1
-              class="font-semibold text-gray-900 text-3xl md:text-6xl leading-normal mb-6"
-            >
-              Une cause Commune pour une vie meilleure
-            </h1>
+            <div class="flex justify-center items-center flex-col mt-20 h-2/3">
+                <h1
+                    class="font-bold text-center text-gray-900 text-4xl md:text-6xl leading-tight mb-4 animate-fadeIn"
+                >
+                    Un repas pour chaque étudiant
+                </h1>
+                <p class="font-light text-gray-500 text-lg md:text-xl mb-10 animate-fadeIn delay-1">
+                    Ensemble, nourrissons l'avenir.
+                </p>
+                <a
+                    href="#donation"
+                    class="px-8 py-4 cursor-pointer bg-blue-500 font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition transform hover:-translate-y-2 duration-300 shadow-lg"
+                >
+                    Faire un don
+                </a>
+            </div>
 
-            <p
-              class="font-light text-gray-400 text-md md:text-lg leading-normal mb-12"
-            >
-              Nous croyons que nous pouvons sauver plus de vies avec vous. Si
-              vous ne faites rien 5 étudiants mourront (votre faute)
-            </p>
-
-            <button
-              class="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500"
-            >
-              Faire un don
-            </button>
-          </div>
-
-          <div class="mt-24">
-            <img src="assets/image/home-img.png" alt="Image" />
-          </div>
+            <!-- Subtle background shapes -->
+            <div class="absolute hidden xl:flex top-10 left-10 w-64 h-64 bg-blue-100 rounded-full opacity-50 blur-3xl -z-10 animate-move-right"></div>
+            <div class="absolute hidden xl:flex bottom-0 right-0 w-72 h-72 bg-pink-100 rounded-full opacity-50 blur-3xl -z-10 animate-move-left"></div>
         </div>
-      </div>
-      <!-- container.// -->
     </section>
     <!-- home section //end -->
 
     <!-- feature section -->
 
     <!-- donation section -->
-<section class="bg-white py-16">
+<section class="bg-white py-16 px-12" id="donation">
+    <h2 class="text-center font-bold text-gray-900 text-3xl md:text-5xl mb-16">
+      Choisir votre don
+    </h2>
     <div
       class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
     >
       <div class="rounded-lg overflow-hidden shadow-md bg-white">
         <div class="px-6 py-8">
-          <h3 class="text-3xl font-bold mb-4 text-purple-600">Basic</h3>
+          <h3 class="text-3xl font-bold mb-4 text-purple-600">Solidaire</h3>
           <p class="text-lg text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Un petit geste qui montre votre soutien et aide les étudiants en difficultés.
           </p>
           <h2 class="text-5xl font-bold mb-8 text-purple-600">1€</h2>
           <div class="flex">
-              <a href="/donate/1" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center text-white text-lg">
+              <a href="/donate/1" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center transition-all hover:bg-indigo-800 text-white text-lg">
                  Faire un don
                  <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
              </a>
@@ -90,13 +86,13 @@
       </div>
       <div class="rounded-lg overflow-hidden shadow-md bg-white ">
         <div class="px-6 py-8">
-          <h3 class="text-3xl font-bold mb-4 text-green-600">Premium</h3>
+          <h3 class="text-3xl font-bold mb-4 text-green-600">Coup de Pouce</h3>
           <p class="text-lg text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Une contribution qui fait la différence pour les étudiants en difficultés.
           </p>
           <h2 class="text-5xl font-bold mb-8 text-green-600">5€</h2>
           <div class="flex">
-              <a href="/donate/5" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center text-white text-lg">
+              <a href="/donate/5" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center text-white text-lg  transition-all hover:bg-indigo-800">
                  Faire un don
                  <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
              </a>
@@ -105,13 +101,13 @@
       </div>
       <div class="rounded-lg overflow-hidden shadow-md bg-white">
         <div class="px-6 py-8">
-          <h3 class="text-3xl font-bold mb-4 text-yellow-600">Pro</h3>
+          <h3 class="text-3xl font-bold mb-4 text-yellow-600">Soutien Décisif</h3>
           <p class="text-lg text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Un don généreux qui aide à nourrir les étudiants en difficultés.
           </p>
           <h2 class="text-5xl font-bold mb-8 text-yellow-600">10€</h2>
           <div class="flex">
-              <a href="/donate/10" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center text-white text-lg">
+              <a href="/donate/10" class="flex bg-indigo-600 rounded-xl py-2 px-4 text-center text-white text-lg  transition-all hover:bg-indigo-800">
                  Faire un don
                  <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
              </a>
@@ -207,8 +203,7 @@
                 </h3>
 
                 <p class="font-light text-gray-400 text-md md:text-lg">
-                  Positive review from <br />
-                  public
+                  D'avis positifs des donateurs
                 </p>
               </div>
             </div>
@@ -247,25 +242,24 @@
 
           <div class="lg:relative py-4 lg:py-0">
             <h1
-              class="font-semibold text-white text-xl md:text-4xl text-center lg:text-left leading-normal md:mb-5 lg:mb-10"
+              class="font-semibold text-white text-balance text-xl md:text-4xl text-center lg:text-left leading-normal md:mb-5 lg:mb-10"
             >
-              Interested in volunteering? Join <br />
-              with us now
+                Rejoignez-nous pour aider les étudiants en difficultés
             </h1>
 
             <div
-              class="hidden md:block flex items-center text-center lg:text-left space-x-5"
+              class="md:block flex gap-4 md:flex-row flex-col items-center text-center md:pt-0 pt-4 lg:text-left space-x-5"
             >
               <input
                 type="text"
                 placeholder="Email"
-                class="px-4 py-4 w-96 bg-gray-50 placeholder-gray-400 rounded-xl outline-none"
+                class="px-4 py-4 w-11/12 md:w-96 bg-gray-50 placeholder-gray-400 rounded-xl outline-none"
               />
 
               <button
                 class="px-6 py-4 font-semibold bg-gray-50 text-info text-lg rounded-xl hover:bg-blue-500 hover:text-white transition ease-in-out duration-500"
               >
-                Join
+                Rejoindre
               </button>
             </div>
           </div>

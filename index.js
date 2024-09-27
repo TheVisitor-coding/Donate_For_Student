@@ -11,6 +11,7 @@ require('dotenv').config();
  * Route
  */
 const router = require('./route');
+const routerSuccess = require('./routeSuccess');
 
 /**
  * Stripe Utils
@@ -30,8 +31,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 })
 
+// Routes
+app.use('/', routerSuccess)
 app.use('/donate', router)
 
+// API
 app.get('/create-payment-intent/:price', async (req, res) => {
     const price = req.params.price * 100
     try {

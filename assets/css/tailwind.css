@@ -2,6 +2,39 @@
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+
+ @keyframes move-right {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(50px, -30px) scale(1.1) rotate(5deg); }
+    100% { transform: translate(100px, -20px) scale(1) rotate(0deg); }
+  }
+
+  /* Keyframes pour le mouvement à gauche avec échelle et légère rotation */
+  @keyframes move-left {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(-40px, 40px) scale(1.05) rotate(-5deg); }
+    100% { transform: translate(-80px, -20px) scale(1) rotate(0deg); }
+  }
+
+  /* Animation CSS pour la bulle de droite */
+  .animate-move-right {
+    animation: move-right infinite alternate 7s ease-in-out forwards;
+  }
+
+  /* Animation CSS pour la bulle de gauche */
+  .animate-move-left {
+    animation: move-left infinite alternate 6s ease-in-out forwards;
+  }
+
 /*
 Document
 ========
@@ -37,6 +70,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  scroll-behavior: smooth;
 }
 
 /*
@@ -50,6 +84,7 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
+  text-wrap: balance;
 }
 
 /**
