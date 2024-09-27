@@ -11,6 +11,15 @@
   animation: fadeIn 1.5s ease-out forwards;
 }
 
+.animate-growing {
+    animation: growing infinite 1s ease-in-out forwards;
+}
+
+@keyframes growing {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 
  @keyframes move-right {
     0% { transform: translate(0, 0) scale(1) rotate(0deg); }

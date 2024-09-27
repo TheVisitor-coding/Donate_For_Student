@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 paymentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    document.getElementById('spinner').classList.remove('hidden')
+    document.getElementById('btn-pay').classList.add('hidden')
     const { error } = await stripe.confirmPayment({
         elements: elements,
         confirmParams: {
