@@ -10,19 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <section
-      class="container mt-8 h-screen w-full mx-auto flex flex-col align-center justify-center"
-    >
+    <section class="h-screen mt-8 flex flex-col items-center bg-zinc-200">
       <p
         id="price"
         class="text-center text-2xl my-4 mb-12 text-purple-600 font-bold"
       ></p>
 
-      <form id="payment-form" class="w-1/2 mx-auto">
-        <div id="payment-element"></div>
+      <form id="payment-form" class="w-full max-w-lg mx-auto">
+        <div id="payment-element" class="mb-6"></div>
         <button
           id="submit"
-          class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+          class="bg-blue-500 text-white px-6 py-3 rounded-md mt-4 font-semibold"
         >
           <div
             id="spinner"

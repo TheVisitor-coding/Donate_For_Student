@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }).then(res => res.json());
 
     const clientSecret = response.client_secret.toString();
-    console.log(clientSecret)
+    
     const options = {
         layout: {
             type: 'accordion',
@@ -33,6 +33,7 @@ paymentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     document.getElementById('spinner').classList.remove('hidden')
     document.getElementById('btn-pay').classList.add('hidden')
+    
     const { error } = await stripe.confirmPayment({
         elements: elements,
         confirmParams: {
